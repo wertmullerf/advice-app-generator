@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useEffect, useState } from "react";
+import dice from "./images/icon-dice.svg";
+import dividerMobile from "./images/pattern-divider-mobile.svg";
+import dividerDesktop from "./images/pattern-divider-desktop.svg";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [quotes, setQuotes] = useState("");
+	const fetchData = () => {
+		fetch("https://api.adviceslip.com/advice")
+			.then((response) => response.json())
+			.then((data) => {
+				setQuotes(data.slip);
+				console.log(data);
+			});
+	};
+	useEffect(() => {
+		fetchData();
+	}, []);
+	return (
+		<div class="container">
+			<h1 class="title">Advice #{quotes.id} </h1>
+			<p class="text">{quotes.advice}</p>
+
+			<picture>
+				<source media="(min-width: 768px)" srcset={dividerDesktop} />
+				<img src={dividerMobile} alt="divider" />
+			</picture>
+
+			<div>
+				<button onClick={() => fetchData()}>
+					<img src={dice} alt="" />
+				</button>
+			</div>
+		</div>
+	);
 }
 
 export default App;
