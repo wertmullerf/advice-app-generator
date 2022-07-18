@@ -16,8 +16,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
--   Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-   Solution URL: [Add solution URL here](https://github.com/wertmullerf/advice-app-generator)
+-   Live Site URL: [Add live site URL here](http://advice-app-generator-woad.vercel.app/)
 
 ### Built with
 
@@ -31,5 +31,5 @@ Users should be able to:
 ## Author
 
 -   Website - [Facundo Wertmuller]
--   Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/wertmullerf)
--   GitHub - [@yourusername](https://github.com/wertmullerf)
+-   Frontend Mentor - [@wertmullerf](https://www.frontendmentor.io/profile/wertmullerf)
+-   GitHub - [@wertmullerf](https://github.com/wertmullerf)
